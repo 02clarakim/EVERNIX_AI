@@ -1,0 +1,7 @@
+symbol,Company,pe_ratio,roe,debt_to_equity,free_cashflow,sector,Final Score,Decision,Confidence,Justification
+AAPL,Apple Inc.,35.089394,1.49814,154.486,94873747456,Technology,0.675,BUY,0.675,BuffettAgent:Action.HOLD(0.50); AckmanAgent:Action.BUY(0.75)
+MSFT,Microsoft Corporation,38.16361,0.33280998,32.661,61070376960,Technology,0.675,BUY,0.675,BuffettAgent:Action.HOLD(0.50); AckmanAgent:Action.BUY(0.75)
+KO,The Coca-Cola Company,24.794327,0.42369998,166.367,1707124992,Consumer Defensive,1.425,BUY,1.0,BuffettAgent:Action.BUY(0.75); AckmanAgent:Action.BUY(0.75)
+BAC,Bank of America Corporation,13.765395,0.0946,0.0,0,Financial Services,0.0,HOLD,0.0,BuffettAgent:Action.HOLD(0.50); AckmanAgent:Action.HOLD(0.50)
+JNJ,Johnson & Johnson,18.912205,0.30212,64.686,11079499776,Healthcare,1.805,BUY,1.0,BuffettAgent:Action.BUY(0.95); AckmanAgent:Action.BUY(0.95)
+PG,The Procter & Gamble Company,23.711212,0.31242,69.861,11380124672,Consumer Defensive,1.425,BUY,1.0,BuffettAgent:Action.BUY(0.75); AckmanAgent:Action.BUY(0.75)

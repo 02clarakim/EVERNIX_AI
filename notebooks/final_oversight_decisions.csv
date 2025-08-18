@@ -1,0 +1,7 @@
+symbol,final_decision,final_confidence,final_score,rationale
+AAPL,HOLD,0.15500000000000003,0.15500000000000003,BuffettAgent:Action.HOLD(0.50); AckmanAgent:Action.BUY(0.75); MomentumAgent:Action.SELL(0.65); CongressAgent:Action.HOLD(0.06)
+MSFT,BUY,1.0,1.195,BuffettAgent:Action.HOLD(0.50); AckmanAgent:Action.BUY(0.75); MomentumAgent:Action.BUY(0.65); CongressAgent:Action.HOLD(0.06)
+KO,BUY,1.0,1.945,BuffettAgent:Action.BUY(0.75); AckmanAgent:Action.BUY(0.75); MomentumAgent:Action.BUY(0.65); CongressAgent:Action.HOLD(0.06)
+BAC,BUY,0.52,0.52,BuffettAgent:Action.HOLD(0.50); AckmanAgent:Action.HOLD(0.50); MomentumAgent:Action.BUY(0.65); CongressAgent:Action.HOLD(0.06)
+JNJ,BUY,1.0,2.325,BuffettAgent:Action.BUY(0.95); AckmanAgent:Action.BUY(0.95); MomentumAgent:Action.BUY(0.65); CongressAgent:Action.HOLD(0.06)
+PG,BUY,0.905,0.905,BuffettAgent:Action.BUY(0.75); AckmanAgent:Action.BUY(0.75); MomentumAgent:Action.SELL(0.65); CongressAgent:Action.HOLD(0.06)

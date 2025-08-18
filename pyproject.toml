@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-lab"
+version = "0.1.0"
+description = "Modular agent lab for investment decision-making (MVP)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "yfinance>=0.2.30",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.1",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.23.0",
+    "scikit-learn>=1.3.0",
+    "requests>=2.31.0",
+    "python-dateutil>=2.8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0.0",
+    "ruff>=0.4.0",
+    "pytest>=7.4.0",
+    "mypy>=1.6.0",
+    "jupyter>=1.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
