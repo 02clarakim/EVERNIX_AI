@@ -1,25 +1,25 @@
 symbol,agent,Company,decision,confidence,score,justification,sector,asof
-AAPL,BuffettAgent,Apple Inc.,HOLD,0.5,4,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Technology (off),Technology,2025-08-18
-MSFT,BuffettAgent,Microsoft Corporation,HOLD,0.5,4,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Technology (off),Technology,2025-08-18
-KO,BuffettAgent,The Coca-Cola Company,BUY,0.75,5,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Consumer Defensive,Consumer Defensive,2025-08-18
-BAC,BuffettAgent,Bank of America Corporation,HOLD,0.5,4,P/E<20 | ROE low | Low debt | No FreeCF | Sector Financial Services,Financial Services,2025-08-18
-JNJ,BuffettAgent,Johnson & Johnson,BUY,0.95,7,P/E<20 | ROE>15% | Debt>Eq | +FreeCF | Sector Healthcare,Healthcare,2025-08-18
-PG,BuffettAgent,The Procter & Gamble Company,BUY,0.75,5,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Consumer Defensive,Consumer Defensive,2025-08-18
-AAPL,AckmanAgent,Apple Inc.,BUY,0.75,5,P/E high/NA | ROE strong | Debt high | FreeCF positive | Sector Technology,Technology,2025-08-18
-MSFT,AckmanAgent,Microsoft Corporation,BUY,0.75,5,P/E high/NA | ROE strong | Debt high | FreeCF positive | Sector Technology,Technology,2025-08-18
-KO,AckmanAgent,The Coca-Cola Company,BUY,0.75,6,P/E OK | ROE strong | Debt high | FreeCF positive | Sector Consumer Defensive off,Consumer Defensive,2025-08-18
-BAC,AckmanAgent,Bank of America Corporation,HOLD,0.5,3,P/E OK | ROE weak | Debt manageable | No FreeCF | Sector Financial Services off,Financial Services,2025-08-18
-JNJ,AckmanAgent,Johnson & Johnson,BUY,0.95,7,P/E OK | ROE strong | Debt high | FreeCF positive | Sector Healthcare,Healthcare,2025-08-18
-PG,AckmanAgent,The Procter & Gamble Company,BUY,0.75,6,P/E OK | ROE strong | Debt high | FreeCF positive | Sector Consumer Defensive off,Consumer Defensive,2025-08-18
-AAPL,MomentumAgent,Apple Inc.,SELL,0.65,-1,MA fast<slow,,2025-08-18
-MSFT,MomentumAgent,Microsoft Corporation,BUY,0.65,1,MA fast>slow,,2025-08-18
-KO,MomentumAgent,The Coca-Cola Company,BUY,0.65,1,MA fast>slow,,2025-08-18
-BAC,MomentumAgent,Bank of America Corporation,BUY,0.65,1,MA fast>slow,,2025-08-18
-JNJ,MomentumAgent,Johnson & Johnson,BUY,0.65,1,MA fast>slow,,2025-08-18
-PG,MomentumAgent,The Procter & Gamble Company,SELL,0.65,-1,MA fast<slow,,2025-08-18
-AAPL,CongressAgent,Apple Inc.,HOLD,0.0625,0,No strong disclosure,,2025-08-18
-MSFT,CongressAgent,Microsoft Corporation,HOLD,0.0625,0,No strong disclosure,,2025-08-18
-KO,CongressAgent,The Coca-Cola Company,HOLD,0.0625,0,No strong disclosure,,2025-08-18
-BAC,CongressAgent,Bank of America Corporation,HOLD,0.0625,0,No strong disclosure,,2025-08-18
-JNJ,CongressAgent,Johnson & Johnson,HOLD,0.0625,0,No strong disclosure,,2025-08-18
-PG,CongressAgent,The Procter & Gamble Company,HOLD,0.0625,0,No strong disclosure,,2025-08-18
+AAPL,BuffettAgent,Apple Inc.,HOLD,0.5,4,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Technology (off),Technology,2025-08-24
+MSFT,BuffettAgent,Microsoft Corporation,HOLD,0.5,4,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Technology (off),Technology,2025-08-24
+KO,BuffettAgent,The Coca-Cola Company,BUY,0.75,5,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Consumer Defensive,Consumer Defensive,2025-08-24
+BAC,BuffettAgent,Bank of America Corporation,HOLD,0.5,4,P/E<20 | ROE low | Low debt | No FreeCF | Sector Financial Services,Financial Services,2025-08-24
+JNJ,BuffettAgent,Johnson & Johnson,BUY,0.95,7,P/E<20 | ROE>15% | Debt>Eq | +FreeCF | Sector Healthcare,Healthcare,2025-08-24
+PG,BuffettAgent,The Procter & Gamble Company,BUY,0.75,5,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Consumer Defensive,Consumer Defensive,2025-08-24
+AAPL,AckmanAgent,Apple Inc.,BUY,0.75,5,P/E high/NA | ROE strong | Debt high | FreeCF positive | Sector Technology,Technology,2025-08-24
+MSFT,AckmanAgent,Microsoft Corporation,BUY,0.75,5,P/E high/NA | ROE strong | Debt high | FreeCF positive | Sector Technology,Technology,2025-08-24
+KO,AckmanAgent,The Coca-Cola Company,BUY,0.75,6,P/E OK | ROE strong | Debt high | FreeCF positive | Sector Consumer Defensive off,Consumer Defensive,2025-08-24
+BAC,AckmanAgent,Bank of America Corporation,HOLD,0.5,3,P/E OK | ROE weak | Debt manageable | No FreeCF | Sector Financial Services off,Financial Services,2025-08-24
+JNJ,AckmanAgent,Johnson & Johnson,BUY,0.95,7,P/E OK | ROE strong | Debt high | FreeCF positive | Sector Healthcare,Healthcare,2025-08-24
+PG,AckmanAgent,The Procter & Gamble Company,BUY,0.75,6,P/E OK | ROE strong | Debt high | FreeCF positive | Sector Consumer Defensive off,Consumer Defensive,2025-08-24
+AAPL,MomentumAgent,Apple Inc.,SELL,0.65,-1,MA fast<slow,,2025-08-24
+MSFT,MomentumAgent,Microsoft Corporation,BUY,0.65,1,MA fast>slow,,2025-08-24
+KO,MomentumAgent,The Coca-Cola Company,BUY,0.65,1,MA fast>slow,,2025-08-24
+BAC,MomentumAgent,Bank of America Corporation,BUY,0.65,1,MA fast>slow,,2025-08-24
+JNJ,MomentumAgent,Johnson & Johnson,BUY,0.65,1,MA fast>slow,,2025-08-24
+PG,MomentumAgent,The Procter & Gamble Company,SELL,0.65,-1,MA fast<slow,,2025-08-24
+AAPL,CongressAgent,Apple Inc.,HOLD,0.0625,0,No strong disclosure,,2025-08-24
+MSFT,CongressAgent,Microsoft Corporation,HOLD,0.0625,0,No strong disclosure,,2025-08-24
+KO,CongressAgent,The Coca-Cola Company,HOLD,0.0625,0,No strong disclosure,,2025-08-24
+BAC,CongressAgent,Bank of America Corporation,HOLD,0.0625,0,No strong disclosure,,2025-08-24
+JNJ,CongressAgent,Johnson & Johnson,HOLD,0.0625,0,No strong disclosure,,2025-08-24
+PG,CongressAgent,The Procter & Gamble Company,HOLD,0.0625,0,No strong disclosure,,2025-08-24

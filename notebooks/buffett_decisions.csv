@@ -1,7 +1,7 @@
 symbol,Company,pe_ratio,roe,debt_to_equity,free_cashflow,sector,Buffett Score,Decision,Confidence,Justification
-AAPL,Apple Inc.,35.089394,1.49814,154.486,94873747456,Technology,4,HOLD,0.5,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Technology (off)
-MSFT,Microsoft Corporation,38.16361,0.33280998,32.661,61070376960,Technology,4,HOLD,0.5,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Technology (off)
-KO,The Coca-Cola Company,24.794327,0.42369998,166.367,1707124992,Consumer Defensive,5,BUY,0.75,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Consumer Defensive
-BAC,Bank of America Corporation,13.765395,0.0946,0.0,0,Financial Services,4,HOLD,0.5,P/E<20 | ROE low | Low debt | No FreeCF | Sector Financial Services
-JNJ,Johnson & Johnson,18.912205,0.30212,64.686,11079499776,Healthcare,7,BUY,0.95,P/E<20 | ROE>15% | Debt>Eq | +FreeCF | Sector Healthcare
-PG,The Procter & Gamble Company,23.711212,0.31242,69.861,11380124672,Consumer Defensive,5,BUY,0.75,P/E high/NA | ROE>15% | Debt>Eq | +FreeCF | Sector Consumer Defensive
+AAPL,Apple Inc,33.938,154.92,0,0,Technology,3,HOLD,0.5,P/E high or NA | ROE strong | Debt OK | No FCF | Sector Technology off-target
+MSFT,Microsoft Corp,37.2271,32.440000000000005,0,0,Technology,3,HOLD,0.5,P/E high or NA | ROE strong | Debt OK | No FCF | Sector Technology off-target
+KO,Coca-Cola Co,25.1409,45.9,0,0,Beverages,3,HOLD,0.5,P/E high or NA | ROE strong | Debt OK | No FCF | Sector Beverages off-target
+BAC,Bank of America Corp,12.7281,9.46,0,0,Banking,5,BUY,0.75,P/E OK | ROE strong | Debt OK | No FCF | Sector Banking off-target
+JNJ,Johnson & Johnson,18.989,30.39,0,0,Pharmaceuticals,5,BUY,0.75,P/E OK | ROE strong | Debt OK | No FCF | Sector Pharmaceuticals off-target
+PG,Procter & Gamble Co,23.3988,30.78,0,0,Consumer products,3,HOLD,0.5,P/E high or NA | ROE strong | Debt OK | No FCF | Sector Consumer products off-target

@@ -1,8 +1,8 @@
 from __future__ import annotations
-from typing import Dict, List, Tuple
+from typing import Dict
 import pandas as pd
-from datetime import date
 from .base import Agent, Decision, Action
+from agent_lab.api import finnhub_data  # <-- fetch fundamentals
 
 class AckmanAgent(Agent):
     name = "AckmanAgent"
@@ -18,63 +18,60 @@ class AckmanAgent(Agent):
             ],
         }
 
-    def decide(self, asof: date, universe: List[str], features: pd.DataFrame) -> Tuple[List[Decision], pd.DataFrame]:
-        decisions: List[Decision] = []
-        table_rows = []
+    def decide(self, symbol: str) -> Decision:
+        """Decide BUY/HOLD/SELL for a single symbol using Finnhub data"""
+        row = finnhub_data.fetch_finnhub_fundamentals_single(symbol)
+        if row is None:
+            return Decision(
+                symbol=symbol,
+                action=Action.HOLD,
+                confidence=0.3,
+                score=0,
+                rationale="No data available",
+                extras={"agent_name": self.name}
+            )
 
-        for sym in universe:
-            if sym not in features.index:
-                continue
-            row = features.loc[sym]
-            score, why = 0, []
+        score, rationale = 0, []
 
-            pe = row.get("pe")
-            if pd.notna(pe) and pe < self.criteria["pe_ratio_max"]:
-                score += 2; why.append("P/E OK")
-            else: why.append("P/E high/NA")
+        pe = row.get("pe")
+        if pd.notna(pe) and pe < self.criteria["pe_ratio_max"]:
+            score += 2; rationale.append("P/E OK")
+        else: rationale.append("P/E high/NA")
 
-            roe = row.get("roe", 0) or 0
-            if roe > self.criteria["roe_min"]:
-                score += 2; why.append("ROE strong")
-            else: why.append("ROE weak")
+        roe = row.get("roe", 0)
+        if roe > self.criteria["roe_min"]:
+            score += 2; rationale.append("ROE strong")
+        else: rationale.append("ROE weak")
 
-            d2e = row.get("debt_to_equity", 0) or 0
-            if d2e < self.criteria["debt_to_equity_max"]:
-                score += 1; why.append("Debt manageable")
-            else: why.append("Debt high")
+        d2e = row.get("debt_to_equity", 0)
+        if d2e < self.criteria["debt_to_equity_max"]:
+            score += 1; rationale.append("Debt manageable")
+        else: rationale.append("Debt high")
 
-            fcf = row.get("free_cashflow", 0) or 0
-            if fcf > 0:
-                score += 2; why.append("FreeCF positive")
-            else: why.append("No FreeCF")
+        fcf = row.get("free_cashflow", 0)
+        if fcf > 0:
+            score += 2; rationale.append("FreeCF positive")
+        else: rationale.append("No FreeCF")
 
-            sector = row.get("sector", "Unknown")
-            if sector in self.criteria["target_sectors"]:
-                score += 1; why.append(f"Sector {sector}")
-            else: why.append(f"Sector {sector} off")
+        sector = row.get("sector", "Unknown")
+        if sector in self.criteria["target_sectors"]:
+            score += 1; rationale.append(f"Sector: {sector}")
+        else: rationale.append(f"Sector: {sector} off-target")
 
-            if score >= 7: action, conf = Action.BUY, 0.95
-            elif score >= 5: action, conf = Action.BUY, 0.75
-            elif score >= 3: action, conf = Action.HOLD, 0.50
-            else:            action, conf = Action.SELL, 0.20
+        if score >= 7:
+            action, confidence = Action.BUY, 0.95
+        elif score >= 5:
+            action, confidence = Action.BUY, 0.75
+        elif score >= 3:
+            action, confidence = Action.HOLD, 0.50
+        else:
+            action, confidence = Action.SELL, 0.20
 
-            decisions.append(Decision(
-                symbol=sym,
-                action=action,
-                confidence=conf,
-                score=score,
-                rationale=" | ".join(why),
-                extras={"sector": sector, "asof": str(asof), "agent_name": self.name}
-            ))
-
-            table_rows.append({
-                "symbol": sym,
-                "score": score,
-                "decision": action.name,
-                "confidence": conf,
-                "justification": " | ".join(why),
-                "sector": sector
-            })
-
-        table = pd.DataFrame(table_rows).set_index("symbol")
-        return decisions, table
+        return Decision(
+            symbol=symbol,
+            action=action,
+            confidence=confidence,
+            score=score,
+            rationale=" | ".join(rationale),
+            extras={"sector": sector, "agent_name": self.name}
+        )
