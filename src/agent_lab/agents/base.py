@@ -17,7 +17,7 @@ class Decision:
     confidence: float          # 0..1
     score: float               # agent-internal score
     rationale: str             # short, human-readable rationale
-    extras: Dict[str, Any]     # extra debug/metrics
+    # extras: Dict[str, Any]     # extra debug/metrics
 
 class Agent(Protocol):
     name: str
