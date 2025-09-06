@@ -16,6 +16,9 @@ export default function Home() {
   const [results, setResults] = useState({});
   const [loading, setLoading] = useState(false);
 
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+
   const handleGenerate = async () => {
     if (!selectedAgent || universe.length === 0) {
       alert("Please select an agent and at least one company.");
@@ -24,7 +27,7 @@ export default function Home() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/generate", {
+      const res = await fetch(`${apiUrl}/generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ agent: selectedAgent, universe, include_oversight: true }),
@@ -88,7 +91,7 @@ export default function Home() {
           {results.selected_csv && (
             <div className="text-right">
               <a
-                href={`http://127.0.0.1:8000/download/${results.selected_csv}`}
+                href={`${apiUrl}/download/${results.selected_csv}`}
                 className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
                 download
               >
