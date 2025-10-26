@@ -107,3 +107,9 @@ def preload_fundamentals(symbols):
     for s in symbols:
         out[s] = get_fundamentals(s)
     return out
+
+
+def clear_cache():
+    """Clears all cached fundamentals."""
+    global _cache_store
+    _cache_store = {}
